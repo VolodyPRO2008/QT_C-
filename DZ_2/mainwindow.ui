@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вариант 2.5 - Qt Контейнеры</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBoxArray">
+      <property name="title">
+       <string>Часть 1: Одномерный массив</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="labelArrayDesc">
+         <property name="text">
+          <string>Введите целые числа через пробел:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditArray"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonArray">
+         <property name="text">
+          <string>Вывести четные - нечетные</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelArrayResult">
+         <property name="text">
+          <string>Результат:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEditArray"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxMatrix">
+      <property name="title">
+       <string>Часть 2: Матрица</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="labelMatrixDesc">
+         <property name="text">
+          <string>Матрица 4x5 со случайными числами (0-99)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEditMatrix"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelMatrixInfo">
+         <property name="text">
+          <string>Матрица 4 x 5</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+         <item>
+          <widget class="QPushButton" name="buttonMatrix">
+           <property name="text">
+            <string>Поменять местами min и max</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonClear">
+           <property name="text">
+            <string>Очистить / Новая матрица</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
