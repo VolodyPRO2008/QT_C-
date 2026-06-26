@@ -7,9 +7,9 @@
 #include <QLabel>
 #include <QFormLayout>
 
-// ============================================================
+
 // ДИАЛОГ ДЛЯ СМЕНЫ РОЛИ
-// ============================================================
+
 ChangeRoleDialog::ChangeRoleDialog(const QString& fullName, int currentRole, QWidget* parent)
     : QDialog(parent)
 {
@@ -157,9 +157,9 @@ int ChangeRoleDialog::getNewRole() const
     return m_roleCombo->currentData().toInt();
 }
 
-// ============================================================
+
 // ДИАЛОГ ДЛЯ РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЯ (ФИО + ГРУППА)
-// ============================================================
+
 EditUserDialog::EditUserDialog(const QString& currentName, int currentRole, const QString& currentGroup, QWidget* parent)
     : QDialog(parent), m_currentRole(currentRole)
 {
@@ -377,9 +377,9 @@ bool EditUserDialog::isStudent() const
     return m_currentRole == 0;
 }
 
-// ============================================================
+
 // ДИАЛОГ ДЛЯ ДОБАВЛЕНИЯ ПОЛЬЗОВАТЕЛЯ
-// ============================================================
+
 AddUserDialog::AddUserDialog(QWidget* parent)
     : QDialog(parent)
 {
@@ -577,9 +577,9 @@ bool AddUserDialog::isStudent() const
     return getRole() == 0;
 }
 
-// ============================================================
-// ADMINPANEL - ТОЛЬКО ОДИН КОНСТРУКТОР!
-// ============================================================
+
+// ADMINPANEL 
+
 AdminPanel::AdminPanel(QWidget* parent)
     : QWidget(parent), m_selectedUserId(-1), m_selectedUserRole(0)
 {
@@ -832,9 +832,9 @@ void AdminPanel::onUserSelected(int index)
     }
 }
 
-// ============================================================
+
 // ADD USER
-// ============================================================
+
 void AdminPanel::addUser()
 {
     AddUserDialog dialog(this);
@@ -880,9 +880,9 @@ void AdminPanel::addUser()
     }
 }
 
-// ============================================================
-// DELETE USER - ИСПРАВЛЕНО (используем addButton)
-// ============================================================
+
+// DELETE USER  
+
 void AdminPanel::deleteUser()
 {
     if (m_selectedUserId == -1) {
@@ -958,9 +958,9 @@ void AdminPanel::deleteUser()
     }
 }
 
-// ============================================================
+
 // CHANGE ROLE
-// ============================================================
+
 void AdminPanel::changeRole()
 {
     if (m_selectedUserId == -1) {
@@ -989,9 +989,9 @@ void AdminPanel::changeRole()
     }
 }
 
-// ============================================================
+
 // EDIT USER
-// ============================================================
+
 void AdminPanel::editUser()
 {
     if (m_selectedUserId == -1) {
@@ -1041,9 +1041,9 @@ void AdminPanel::editUser()
     }
 }
 
-// ============================================================
+
 // EXPORT USERS TO CSV
-// ============================================================
+
 void AdminPanel::exportUsersToCSV()
 {
     QString fileName = QFileDialog::getSaveFileName(
